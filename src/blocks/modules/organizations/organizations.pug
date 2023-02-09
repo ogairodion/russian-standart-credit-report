@@ -1,0 +1,58 @@
+include organizations-data.pug
+
+section.section
+    .l-content 
+        .section__top
+            h1.section__title.title.title--h1 Организации
+            a.section__btn.btn.btn--green(href="") Новая организация
+        .section__filters.filters
+            .filters__top
+                .filters__top-icon
+                    +svgMono('arrow-dropdown')
+                .filters__top-title Фильтр
+            .filters__content.close
+                form.form
+                    .form__inputs
+                        .form__input
+                            .form__input-label Индетификатор:
+                            input(type="text")
+                        .form__input
+                            .form__input-label ИНН:
+                            input(type="text")
+                        .form__input
+                            .form__input-label Краткое название:
+                            input(type="text")
+                        .form__input
+                            .form__input-label Дата создания:
+                            input(type="text")
+                        .form__input
+                            .form__input-label ОГРН:
+                            input(type="text")
+                        .form__input.form__select
+                            .form__input-label Тип:
+                            select.select(name="type")  
+                                option(selected="selected") Любой
+                                option Любой
+                                option Любой
+                                option Любой
+                    .form__btns
+                        button.form__btn.btn Очистить
+                        button.form__btn.btn.btn--green(type="submit") Применить
+        table.table
+            thead 
+                tr 
+                    each header in headers
+                        td= header
+            tbody 
+                each col in cols
+                    tr 
+                        each row in col.row
+                            td= row
+                        td
+                            .table__icons
+                                .table__icon
+                                    +svgMono('edit')
+                                .table__icon
+                                    +svgMono('users')
+                                .table__icon
+                                    +svgMono('registration')

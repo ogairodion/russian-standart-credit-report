@@ -1,0 +1,10 @@
+include menu-data.pug
+.menu.menu-documents
+    each menu_document in menu_documents
+        a.menu-documents__item(class=menu_document.status href="")
+            .menu-documents__item-status(class=menu_document.status)
+            .menu-documents__item-info
+                .menu-documents__item-name= menu_document.name
+                .menu-documents__item-date--title= menu_document.date_title
+                .menu-documents__item-date= menu_document.date
+                .menu-documents__item-company= menu_document.company

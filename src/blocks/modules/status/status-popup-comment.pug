@@ -1,0 +1,25 @@
+- 
+    const status_people = ['Васильев Стас Михайлович', 'Поросенков Петр Петрович', 'Тарасов Миколай Степанович', 'Игнатьева Людмила Захаровна', 'Попова Мария Васильевна']
+
+.status-popup.status-popup-comment#status-popup-comment
+    .l-content 
+        h1.status-popup__title.title.title--h1 Добавить комментарий
+        .status-popup-comment__form.form
+            .form__inputs
+                .form__input
+                    .form__input-label Текст комментария:
+                    textarea
+                .form__input-upload
+                    .form__input
+                        .form__input-label Загрузить файл
+                        .form__input-file
+                            input(type="file")
+                            .form__input-file--info
+                            .form__input-btn.btn.btn--green Выбрать файл
+                .form__checkboxes  
+                    each status_man, index in status_people
+                        .form__input.form__checkbox
+                            input(type="checkbox" id=index)
+                            label.form__checkbox-label(for=index)= status_man
+                .form__address--add Добавить адресата
+            button.form__input-btn.btn.btn--green(type="submit") Добавить

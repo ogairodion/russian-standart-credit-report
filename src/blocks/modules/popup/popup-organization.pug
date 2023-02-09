@@ -1,0 +1,59 @@
+-
+    const ids = 20;
+
+.popup-organization#popup-organization
+    .popup-organization__title Данные организации
+    form.form
+        .form__item
+            .caption Реквизиты
+            .form__inputs.form__inputs-rek
+                .form__input
+                    .form__input-label ИНН *
+                    input.form__input--icon(type="text" required)
+                    .form__input-icon
+                        +svgColor('search')
+                .form__input
+                    .form__input-label ОГРН 
+                    input(type="text")
+                .form__input
+                    .form__input-label ID *
+                    input(type="text" required)
+                .form__input
+                    .form__input-label ОКПО
+                    input.form__input--icon(type="text")
+                    .form__input-icon
+                        +svgColor('ya')
+            .form__inputs
+                .form__input
+                    .form__input-label Краткое название 
+                    input(type="text")
+                .form__input
+                    .form__input-label Краткое название
+                    textarea
+            button.form__btn.btn.btn--green Данные ЕГРЮЛ
+            .caption Реквизиты
+            .form__inputs
+                .form__input.form__select
+                    select.select(name="type")  
+                        option(selected="selected") Любой
+                        option Любой
+                        option Любой
+                        option Любой
+                .form__input.form__checkbox
+                    input(type="checkbox" id="1222")
+                    label.form__checkbox-label(for="1222") Предоставление бесплатных кредитных отчетов субъектам кредитных историй 
+            .caption Параметры доступа
+            .form__inputs
+                .form__input.form__checkbox
+                    input(type="checkbox" id="2222")
+                    label.form__checkbox-label(for="2222") Блокировка
+        .form__item
+            .caption Разрешения
+            .form__item-subtitle Сервисы
+            .form__item-checkboxes  
+                - for(let i = 0; i < ids; i++)
+                    .form__input.form__checkbox
+                        input(type="checkbox" id=i)
+                        label.form__checkbox-label(for=i) Кредитный отчет для пользователя
+        button.form__submit.form__btn.btn.btn--green(type="submit") Сохранить изменения
+            

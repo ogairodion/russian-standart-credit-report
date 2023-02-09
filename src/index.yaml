@@ -1,0 +1,31 @@
+ProjectTitle: ProjectName
+
+PageList:
+  - file: homepage.html
+    ready: 100
+  - file: certificates.html
+    ready: 100
+  - file: organizations.html
+    ready: 100
+  - file: parameters.html
+    ready: 100
+  - file: documentation.html
+    ready: 100
+  - file: status.html
+    ready: 100
+  - file: documentation-develop.html
+    ready: 100
+  - file: result.html
+    ready: 100
+  - file: popup-organization.html
+    ready: 100
+  - file: popup-fiz.html
+    ready: 100
+  - file: status-popup.html
+    ready: 100
+  - file: status-popup-comment-message.html
+    ready: 100
+  - file: authorization.html
+    ready: 100
+  - file: registration.html
+    ready: 100

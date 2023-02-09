@@ -1,0 +1,42 @@
+.popup#popup-certificate
+    .popup__top
+        .popup__top-icon
+            +svgMono('new-request')
+        .popup__top-title Мастер запроса на сертификат
+    .popup__content
+        .popup__subtitle Выберите нужное действие и нажмите кнопку «Далее»
+        form.form
+            .popup__step(data-step="1")
+                .popup__radios
+                    .form__radio  
+                        input(type="radio" name="reques-1" checked)
+                        .form__radio-btn
+                        label.form__radio-label(for="request-1") Создать новые криптографические ключи на этом ПК, сформировать и отправить в Бюро запрос на сертификат
+                    .form__radio  
+                        input(type="radio" name="reques-1")
+                        .form__radio-btn
+                        label.form__radio-label(for="request-1") Скопировать и буфера обмена и отправить в Бюро готовый запрос на сертификат (в кодировке «Base-64»)
+            .popup__step.hidden(data-step="2")
+                .form__inputs
+                    .form__input
+                        .form__input-label Имя владельца сертификата:
+                        input(type="text" name="name")
+                    .form__input
+                        .form__input-label Адрес электронной почты владельца сертификата
+                        input(type="email" name="email")
+                    .form__input
+                        .form__input-label Название организации владельца сертификата
+                        input(type="text" name="certificate_name")
+                    .form__input
+                        .form__input-label Криптографический алгоритм открытого ключа
+                        input(type="text" name="algorythm")
+                    .form__input
+                        .form__input-label Код страны владельца сертификата
+                        input(type="text" name="country_code")
+                    .form__input
+                        .form__input-label Город владельца сертификата
+                        input(type="text" name="city")
+            .form__btns
+                button.form__btn.btn.hidden(data-btn="prev") Назад
+                button.form__btn.btn.btn--green(data-btn="next") Далее
+                button.form__btn.btn.btn--green.hidden(type="submit" data-btn="submit") Отправить

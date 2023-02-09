@@ -1,0 +1,102 @@
+section.result
+    .l-content 
+        h1.result__title.title.title--h1 Результат
+        .result__top
+            a.result__btn.btn.btn--green(href="") Данные запроса
+        .result__wrapper
+            .result__content
+                .result__items
+                    .result__item
+                        .result__item-top
+                            .result__item-title Титульная часть
+                            .result__item-icons
+                                a.result__item-icon(href="") 
+                                    +svgMono('edit-n')
+                                a.result__item-icon(href="") 
+                                    +svgMono('add')
+                                a.result__item-icon(href="") 
+                                    +svgMono('close')
+                        .result__item-description Номер клиента: 24232354
+                        form.result__item-form.form
+                            .form__inputs
+                                .form__input
+                                    .form__input-label Фамилия:
+                                    input(type="text")
+                                .form__input
+                                    .form__input-label Имя:
+                                    input(type="text")
+                                .form__input
+                                    .form__input-label Отчество:
+                                    input(type="text")
+                                .form__input
+                                    .form__input-label Дата рождения:
+                                    input(type="date")
+                                .form__input
+                                    .form__input-label Место рождения:
+                                    input(type="text")
+                        .result__item-description Информация о документах
+                        form.result__item-form.form
+                            .form__inputs
+                                .form__input
+                                    .form__input-label Фамилия:
+                                    input(type="text")
+                                .form__input
+                                    .form__input-label Имя:
+                                    input(type="text")
+                                .form__input
+                                    .form__input-label Отчество:
+                                    input(type="text")
+                                .form__input
+                                    .form__input-label Дата рождения:
+                                    input(type="date")
+                                .form__input
+                                    .form__input-label Место рождения:
+                                    input(type="text")
+                    .result__item
+                        .result__item-top
+                            .result__item-title Информация по субъекту
+                            .result__item-icons
+                                a.result__item-icon(href="") 
+                                    +svgMono('edit-n')
+                        .result__item-description Адреса
+                        form.result__item-form.form
+                            .form__inputs
+                                .form__input.form__input--100
+                                    .form__input-label Адрес регистрации по месту жительства:
+                                    input(type="text")
+                    .result__item
+                        .result__item-top
+                            .result__item-title Информационная часть
+                            .result__item-icons
+                                a.result__item-icon(href="") 
+                                    +svgMono('close')
+                        .result__item-sub
+                            .result__item-title Кредитная заявка
+                            .result__item-icons
+                                a.result__item-icon(href="") 
+                                    +svgMono('edit-n')
+                                a.result__item-icon(href="") 
+                                    +svgMono('close')
+                        .result__item-description Адреса
+                        form.result__item-form.form
+                            .form__inputs
+                                .form__input.form__input--100
+                                    .form__input-label Тип события информационной части:
+                                    input(type="text")
+                .result__bottom
+                    .result__bottom-item
+                        .result__bottom-icon
+                            +svgColor('a2a')
+                        .result__bottom-text Передать данные на сервис A2A
+                    .result__bottom-item
+                        .result__bottom-icon
+                            img(src="img/svg/xml.svg", alt="")
+                        .result__bottom-text Скачать отредактированый XML
+            .result__sidebar
+                .result__sidebar-item.active Титульная часть
+                .result__sidebar-item Информация по субъекту
+                .result__sidebar-item Информационная часть
+                .result__sidebar-item Кредиты
+                .result__sidebar-item Поручительства
+                .result__sidebar-item Гарантии
+                .result__sidebar-item Обязательства

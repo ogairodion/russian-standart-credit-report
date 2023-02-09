@@ -1,0 +1,14 @@
+extends ../layouts/default
+include ../helpers/_mixins
+
+block variables
+  - const title = "Авторизация"
+
+block content
+      include ../../blocks/modules/loader/loader.pug
+      main.main.main--authorization
+        include ../../blocks/modules/authorization/authorization.pug
+      
+block scripts
+  script(defer src="./js/vendor.js")
+  script(defer src="./js/main.js")

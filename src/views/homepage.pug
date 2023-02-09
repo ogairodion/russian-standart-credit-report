@@ -1,0 +1,17 @@
+extends layouts/default
+include helpers/_mixins
+
+block variables
+  - const title = "Личные данные"
+
+block content
+      include ../blocks/modules/loader/loader.pug
+      include ../blocks/modules/header/header.pug
+      main.main
+        include ../blocks/modules/sidebar/sidebar.pug
+        .content
+          include ../blocks/modules/personal/personal.pug
+
+block scripts
+  script(defer src="js/vendor.js")
+  script(defer src="js/main.js")

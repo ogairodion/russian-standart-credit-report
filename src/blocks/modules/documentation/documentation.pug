@@ -1,0 +1,65 @@
+-
+    const documentations = [
+        {
+            type: 'word',
+            text: 'Текст типового договора об оказании информационных услуг',
+        },
+        {
+            type: 'word',
+            text: 'Текст типового договора об оказании информационных услуг для агентов Бюро',
+        },
+        {
+            type: 'pdf',
+            text: 'Регламент подключения к АС Бюро',
+        },
+        {
+            type: 'pdf',
+            text: 'Реквизиты бюро',
+        },
+        {
+            type: 'pdf',
+            text: 'Устав бюро',
+        },
+        {
+            type: 'pdf',
+            text: 'Свидетельство о государственной регистрации',
+        },
+        {
+            type: 'pdf',
+            text: 'Свидетельство о постановке на налоговый учет',
+        },
+        {
+            type: 'pdf',
+            text: 'Протокол о назначении Генерального директора',
+        },
+        {
+            type: 'pdf',
+            text: 'Приказ о вступлении в должность Генерального директора',
+        },
+        {
+            type: 'pdf',
+            text: 'Лицензия ТЗКИ',
+        },
+        {
+            type: 'pdf',
+            text: 'Лицензия ФСБ',
+        },
+        {
+            type: 'pdf',
+            text: 'Сведения из ЕГРЮЛ от 02.02.2015',
+        },
+        {
+            type: 'pdf',
+            text: 'Регламент УЦ',
+        }
+    ]
+
+section.section
+    .l-content 
+        h1.section__title.title.title--h1 Договорная документация
+        .caption Документация:
+        each documentation in documentations
+            a.section__list(href="")
+                .section__list-icon
+                    +svgColor(documentation.type)
+                .section__list-title= documentation.text

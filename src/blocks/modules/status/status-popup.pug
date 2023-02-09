@@ -1,0 +1,122 @@
+include status-data.pug
+.status-popup
+    .l-content 
+        h1.status-popup__title.title.title--h1 Статус обработки
+        .status-popup__item
+            .status-popup__item-top
+                .status-popup__item-arrow.dropdown-arrow
+                    +svgMono('arrow-dropdown')
+                .status-popup__item-title Информация о загруженом файле
+            .status-popup__item-wrapper.dropdown-content
+                .status-popup__item-content 
+                    table.table.table-status
+                        tbody 
+                            each status_info_item in status_info
+                                tr 
+                                    td= status_info_item.title
+                                    td(class=status_info_item.class)= status_info_item.text
+                .status-popup__item-comments.comments
+                    .comments__title Комментарии:
+                    .comment.first
+                        .comment__top
+                            .comment__name #1
+                            .comment__date 02.05.2022 20:35:34 
+                        .comment__body 
+                            .comment__body-text Загружен файл: Front-2255252-252521.zip
+                    .comment
+                        .comment__top
+                            .comment__name Николай Федотов
+                            .comment__date 02.05.2022 20:35:34 
+                        .comment__body 
+                            .comment__body-text Добрый день! Загрузил в систему файл на поиск телефонов. Ищем только домашние и мобильные. 
+                            .comment__push
+                                span.comment__push-title Уведомление отправлено: 
+                                span.comment__push-text Игорь Римский [rimskiy@rs-cb.ru]
+                            .comment__push
+                                span.comment__push-title Уведомление отправлено: 
+                                span.comment__push-text Руслан Закиров [rimskiy@rs-cb.ru]
+                            .comment__push
+                                span.comment__push-title Уведомление отправлено: 
+                                span.comment__push-text Константин Колесин [rimskiy@rs-cb.ru]
+                    .comment
+                        .comment__top
+                            .comment__name.comment__name--red Николай Федотов
+                            .comment__date 02.05.2022 20:35:34 
+                        .comment__body 
+                            .comment__body-text Добрый день! Загрузил в систему файл на поиск телефонов. Ищем только домашние и мобильные. 
+                            .comment__push
+                                span.comment__push-title Уведомление отправлено: 
+                                span.comment__push-text Игорь Римский [rimskiy@rs-cb.ru]
+                            .comment__push
+                                span.comment__push-title Уведомление отправлено: 
+                                span.comment__push-text Руслан Закиров [rimskiy@rs-cb.ru]
+                            .comment__push
+                                span.comment__push-title Уведомление отправлено: 
+                                span.comment__push-text Константин Колесин [rimskiy@rs-cb.ru]
+                    a.comment__btn.btn.btn--green(href="#status-popup-comment" data-fancybox data-options='{"touch" : false}') Добавить
+        .status-popup__item
+            .status-popup__item-top
+                .status-popup__item-arrow.dropdown-arrow
+                    +svgMono('arrow-dropdown')
+                .status-popup__item-title Документ
+            .dropdown-content
+                .status-popup__item-wrapper
+                    .status-popup__item-content 
+                        table.table.table-status
+                            tbody 
+                                each status_document_item in status_document
+                                    tr 
+                                        td= status_document_item.title
+                                        td(class=status_document_item.class)= status_document_item.text
+                .status-popup__scheme.scheme
+                    .scheme__wrapper
+                        .scheme__first
+                            .scheme__item 
+                                .scheme__text Обработка
+                            .scheme__second
+                                .scheme__subitem
+                                    .scheme__item
+                                        .scheme__text Предварительная загрузка
+                                    .scheme__item
+                                        .scheme__text Обработка завершена
+                                .scheme__third
+                                    .scheme__subitem
+                                        .scheme__item
+                                            .scheme__text Элементы «Annul»
+                                        .scheme__item
+                                            .scheme__text 5088
+                                    .scheme__subitem
+                                        .scheme__item
+                                            .scheme__text Ошибки
+                                        .scheme__item.scheme__item-number
+                                            .scheme__text 0
+                                    .scheme__subitem
+                                        .scheme__item
+                                            .scheme__text Предупреждения
+                                        .scheme__item.scheme__item-number
+                                            .scheme__text 0
+                        .scheme__first
+                            .scheme__item 
+                                .scheme__text Обработка
+                            .scheme__second
+                                .scheme__subitem
+                                    .scheme__item
+                                        .scheme__text Предварительная загрузка
+                                    .scheme__item
+                                        .scheme__text Обработка завершена
+                                .scheme__third
+                                    .scheme__subitem
+                                        .scheme__item
+                                            .scheme__text Элементы «Annul»
+                                        .scheme__item
+                                            .scheme__text 5088
+                                    .scheme__subitem
+                                        .scheme__item
+                                            .scheme__text Ошибки
+                                        .scheme__item.scheme__item-number
+                                            .scheme__text 0
+                                    .scheme__subitem
+                                        .scheme__item
+                                            .scheme__text Предупреждения
+                                        .scheme__item.scheme__item-number
+                                            .scheme__text 0

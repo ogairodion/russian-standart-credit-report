@@ -1,0 +1,15 @@
+extends ../layouts/default
+include ../helpers/_mixins
+
+block variables
+  - const title = "Статус обработки"
+
+block content
+        include ../../blocks/modules/loader/loader.pug
+        .content
+          include ../../blocks/modules/status/status-popup.pug
+          include ../../blocks/modules/status/status-popup-comment.pug
+
+block scripts
+  script(defer src="./js/vendor.js")
+  script(defer src="./js/main.js")

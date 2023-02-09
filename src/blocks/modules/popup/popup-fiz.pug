@@ -1,0 +1,106 @@
+.popup-fiz#popup-fiz
+    .popup-organization__title Обращение физического лица
+    form.form
+        .form__goals
+            .form__title Цели обращения
+            .form__input.form__checkbox
+                input(type="checkbox" id='1')
+                label.form__checkbox-label(for='1') — Выдать кредитный отчет КБРС
+            .form__input.form__checkbox
+                input(type="checkbox" id='2')
+                label.form__checkbox-label(for='2') — Запросить и выдать кредитный отчет НБКИ
+            .form__input.form__checkbox
+                input(type="checkbox" id='3')
+                label.form__checkbox-label(for='3') — не создавать учетную запись в Личном Кабинете Бюро
+        .form__title Идентификация физического лица
+        .form__inputs
+            .form__input
+                .form__input-label Фамилия * 
+                input(type="text" required)
+            .form__input
+                .form__input-label Имя *
+                input(type="text" required)
+            .form__input
+                .form__input-label Отчество *
+                input(type="text" required)
+            .form__input.form__input-small
+                .form__input-label Дата рождения
+                input(type="date")
+            .form__input
+                .form__input-label Место рождения
+                input(type="text")
+            .form__input.form__select.form__input-small
+                .form__input-label Пол
+                select.select(name="type")  
+                    option(selected="selected") Любой
+                    option Любой
+                    option Любой
+                    option Любой
+            .form__input.form__select
+                .form__input-label Семейное положение
+                select.select(name="type")  
+                    option(selected="selected") Любой
+                    option Любой
+                    option Любой
+                    option Любой
+            .form__input
+                .form__input-label ИНН
+                input(type="text")
+            .form__input
+                .form__input-label СНИЛС (карточка пенс. страхования)
+                input(type="text")
+        .form__title Идентификация физического лица
+        .form__inputs
+            .form__input.form__select
+                .form__input-label Семейное положение
+                select.select(name="type")  
+                    option(selected="selected") Любой
+                    option Любой
+                    option Любой
+                    option Любой
+            .form__input.form__input-small
+                .form__input-label Номер документа *
+                input(type="text" required)
+            .form__input.form__input-small
+                .form__input-label Дата выдачи *
+                input(type="date" required)
+            .form__input
+                .form__input-label Документ выдан ( каким гос. учереждением)
+                input(type="text")
+            .form__input.form__input-small
+                .form__input-label Код подразделения
+                input(type="text")
+            a.form__add(href="") 
+                +svgMono('add')
+        .form__title Адреса физического лица (РФ)
+        .form__inputs
+            .form__inputs-empty Нет данных
+            a.form__add(href="") 
+                +svgMono('add')
+        .form__title Телефоны физического лица (РФ)
+        .form__inputs
+            .form__input.form__select
+                .form__input-label Семейное положение
+                select.select(name="type")  
+                    option(selected="selected") Любой
+                    option Любой
+                    option Любой
+                    option Любой
+            .form__input.form__input-small
+                .form__input-label Номер документа *
+                input(type="text" required)
+            a.form__add(href="") 
+                +svgMono('add')
+        .form__title Адрес электронной почты
+        .form__inputs
+            .form__input
+                .form__input-label E-mail
+                input(type="text")
+            a.form__add(href="") 
+                +svgMono('add')
+        .form__bottom
+            .form__bottom-message * обязательно для запонения
+            .form__btns
+                button.form__btn.btn.btn--green(type="submit") Сформировать заявление
+                button.form__btn.btn.btn--green Добавить обращение
+

@@ -1,0 +1,17 @@
+extends ../layouts/default
+include ../helpers/_mixins
+
+block variables
+  - const title = "Результат"
+
+block content
+      include ../../blocks/modules/loader/loader.pug
+      include ../../blocks/modules/header/header.pug
+      main.main
+        include ../../blocks/modules/sidebar/sidebar-edit.pug
+        .content
+          include ../../blocks/modules/result/result.pug
+
+block scripts
+  script(defer src="./js/vendor.js")
+  script(defer src="./js/main.js")

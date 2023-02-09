@@ -1,0 +1,40 @@
+section.personal
+    .l-content
+        h1.personal__title.title.title--h1 Личные данные
+        .caption Организация:
+        .personal__item
+            .personal__item-title Краткое название:
+            .personal__item-text ООО «КРЕДИТНОЕ БЮРО РУССКИЙ СТАНДАРТ»
+        .personal__item
+            .personal__item-title ИНН:
+            .personal__item-text 7719562097
+        form.form
+            .caption Учетная запись:
+            .personal__item
+                .form__top
+                    .form__inputs
+                        .form__input
+                            .form__input-label Логин *
+                            input(type="text" required name="login")
+                            a.form__submit.btn.btn--green(href="") Изменить пароль
+                        .form__input
+                            .form__input-label Ваш E-mail *
+                            input(type="email" required name="email")
+            .caption Пользователь:
+            .personal__item
+                .form__inputs
+                    .form__input
+                        .form__input-label Фамилия *
+                        input(type="text" required name="secondName")
+                    .form__input
+                        .form__input-label Имя *
+                        input(type="text" required name="name")
+                    .form__input
+                        .form__input-label Отчество *
+                        input(type="text" required name="thirdName")
+                    .form__input
+                        .form__input-label Роль
+                        input(type="text" required name="role")
+            button.form__submit.btn.btn--green(type="submit") Сохранить изменения
+            
+    

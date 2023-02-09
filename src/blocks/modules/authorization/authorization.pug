@@ -1,0 +1,33 @@
+section.authorization
+    .l-default  
+        .authorization__top
+            .authorization__top-wrapper
+                .authorization__top-logo
+                    +svgColor('logo')
+        .authorization__wrapper
+            form.authorization__form.form
+                .form__top
+                    .form__icon
+                        img(src="img/svg/login.svg", alt="")
+                    .form__title Вход в систему для Юридических лиц
+                .form__body
+                    .form__inputs
+                        .form__input
+                            .form__input-label Ваш логин:
+                            .form__input-description Формат логина: номер телефона без 8, электронная почта, буквенно-цифровой
+                            input(type="text" name="login")
+                        .form__input
+                            .form__input-label Ваш пароль:
+                            input(type="password" name="password")
+                    .form__bottom
+                        .form__input.form__checkbox
+                            input(type="checkbox" id="1")
+                            label.form__checkbox-label(for="1") Запомнить меня
+                        .form__link 
+                            .form__link-icon 
+                                +svgColor('forgot')
+                            .form__link-text Забыли пароль?
+                    .form__btns
+                        button.form__btn.btn.btn--green(type="submit") Войти
+            .authorization__img
+                +webp(['authorization/men'], 'png')

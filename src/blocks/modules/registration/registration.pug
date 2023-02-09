@@ -1,0 +1,47 @@
+section.registration
+    form.registration__form.form
+        .form__top
+            .form__icon 
+                img(src="img/svg/user.svg", alt="")
+            .form__title Регистрация для Юридических лиц
+        .form__items
+            .form__half.form__item
+                .form__item-title Учетная запись
+                .form__inputs
+                    .form__input
+                        .form__input-label Ваш логин: *
+                        input(type="text" name="login" required)
+                    .form__input
+                        .form__input-label Ваш пароль: *
+                        input(type="password" name="password" required)
+                    .form__input
+                        .form__input-label Подтвердите пароль: *
+                        input(type="password" name="password_approve" required)
+                    .form__input
+                        .form__input-label Адрес электронной почты: *
+                        input(type="email" name="email" required)
+            .form__half.form__item
+                .form__item-title Пользователь
+                .form__inputs
+                    .form__input
+                        .form__input-label Фамилия: *
+                        input(type="text" name="second_name" required)
+                    .form__input
+                        .form__input-label Имя: *
+                        input(type="text" name="name" required)
+                    .form__input
+                        .form__input-label Отчество: *
+                        input(type="text" name="last_name" required)
+                    .form__input
+                        .form__input-label Роль: 
+                        input(type="text" name="role")
+            .form__half.form__item
+                .form__item-title Подтверждение
+                .form__inputs
+                    .form__input
+                        .form__input-label Код регистрации: *
+                        input(type="text" name="code" required)
+        .form__btns
+            .form__btns-text * Поля обязательные для заполнения  
+            button.form__btn.btn.btn--green(type="submit") Регистрация
+        

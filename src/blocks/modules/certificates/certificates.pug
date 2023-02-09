@@ -1,0 +1,36 @@
+include certificates-data.pug
+section.certificates
+    .l-content 
+        h1.section__title.title.title--h1 Сертификаты
+        .section__items
+            each certificate in certificates
+                - if (certificate.type == 'fancy')
+                    a.section__item(href=certificate.href data-fancybox data-options='{"touch" : false}')
+                        .section__item-icon
+                            +svgMono(certificate.icon)
+                        .section__item-text= certificate.text
+                - else  
+                    a.section__item(href="")
+                        .section__item-icon
+                            +svgMono(certificate.icon)
+                        .section__item-text= certificate.text
+        table.table
+            thead 
+                tr 
+                    each header in headers
+                        td= header
+            tbody 
+                each col in cols
+                    tr 
+                        each row in col.row
+                            td= row
+                        td
+                            .table__icons
+                                .table__icon
+                                    +svgMono('print')
+                                .table__icon
+                                    +svgMono('upload')
+                                .table__icon
+                                    +svgMono('setup')
+
+

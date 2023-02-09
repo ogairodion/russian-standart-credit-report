@@ -1,0 +1,42 @@
+include status-data.pug
+section.section
+    .l-content 
+        h1.section__title.title.title--h1 Статус обработки
+        .status__items
+            a.status__item(href="") 
+                .status__item-icon
+                    +svgMono('add-doc')
+                .status__item-title Добавить
+            a.status__item(href="") 
+                .status__item-icon
+                    +svgMono('print')
+                .status__item-title Печать
+        table.section__table.table
+            thead 
+                tr 
+                    each header in headers
+                        td= header
+            tbody 
+                each col, index in cols
+                    tr 
+                        each row, index in col.row
+                            - if (index == 0)
+                                td
+                                    .status__icon(class=row)
+                            - else if (index == 1)
+                                td 
+                                    a(href="")= row
+                            - else 
+                                td= row
+                        td
+                            .table__icons
+                                .table__icon
+                                    +svgMono('edit')
+                                .table__icon
+                                    +svgMono('settings-action')
+                                .table__icon
+                                    +svgMono('checklist')
+                                .table__icon
+                                    +svgMono('download-action')
+                                .table__icon
+                                    +svgMono('delete')

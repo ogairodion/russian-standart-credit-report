@@ -1,0 +1,82 @@
+section.parameters
+    .l-content
+        h1.section__title.title.title--h1 Параметры запросов БКИ
+        form.form
+            .caption Кредитный отчет:
+            .form__checkbox-list
+                .form__input.form__checkbox.form__checkbox-parameters
+                    input(type="checkbox" id="1")
+                    label.form__checkbox-label(for="1") Крединтый отчет для пользователя
+                .form__checkbox-items.hidden
+                    .form__checkbox-item
+                        .form__radio  
+                            input(type="radio" name="parameters-1" checked)
+                            .form__radio-btn
+                            label.form__radio-label(for="parameters-1") Кредитный отчет для пользователя, содержащий титульную, основную и информационную части КИ
+                        .form__radio  
+                            input(type="radio" name="parameters-1" checked)
+                            .form__radio-btn
+                            label.form__radio-label(for="parameters-1") Кредитный отчет для пользователя, содержащий только титульную и основную части КИ
+                        .form__radio  
+                            input(type="radio" name="parameters-1" checked)
+                            .form__radio-btn
+                            label.form__radio-label(for="parameters-1") Кредитный отчет для пользователя, содержащий только титульную и информационную часть КИ
+            .caption Дополнительные сервисы:
+            .form__input.form__checkbox
+                input(type="checkbox" id="2")
+                label.form__checkbox-label(for="2") Информация о предыдущих запросах (в ответе не более <input type="text"> последних )
+            .section__caption Рейтинги:
+            .form__input.form__checkbox 
+                input(type="checkbox" id="3")
+                label.form__checkbox-label(for="3")  Кредитный рейтинг
+            .form__input.form__checkbox 
+                input(type="checkbox" id="4")
+                label.form__checkbox-label(for="4") Рейтинг дефолтности работодателя
+            .form__input.form__checkbox 
+                input(type="checkbox" id="5")
+                label.form__checkbox-label(for="5") Рейтинг в строковом представлении
+            .form__input.form__checkbox.disabled 
+                input(type="checkbox" id="6")
+                label.form__checkbox-label(for="6") Информация ЕГРЮЛ ФНС
+            .form__input.form__checkbox.disabled
+                input(type="checkbox" id="7")
+                label.form__checkbox-label(for="7") Информация ЕГРИП ФНС
+            .form__input.form__checkbox 
+                input(type="checkbox" id="8")
+                label.form__checkbox-label(for="8") Верификация
+            .form__checkbox-list
+                .form__input.form__checkbox.form__checkbox-parameters 
+                    input(type="checkbox" id="9")
+                    label.form__checkbox-label(for="9") Платежная история
+                .form__checkbox-items.hidden
+                    .form__checkbox-item
+                        .form__radio  
+                            input(type="radio" name="parameters-2" checked)
+                            .form__radio-btn
+                            label.form__radio-label(for="parameters-2") Запрашивать операторов до первого результативного ответа, вычислять помесячную агрегацию
+                        .form__radio  
+                            input(type="radio" name="parameters-2" checked)
+                            .form__radio-btn
+                            label.form__radio-label(for="parameters-2") Запрашивать всех операторов
+                        .form__radio  
+                            input(type="radio" name="parameters-2" checked)
+                            .form__radio-btn
+                            label.form__radio-label(for="parameters-2") Запрашивать всех операторов
+            .form__checkbox-list
+                .form__input.form__checkbox.form__checkbox-parameters 
+                    input(type="checkbox" id="10")
+                    label.form__checkbox-label(for="10") Запрос в ФМС (проверка паспорта)
+                .form__checkbox-items.hidden
+                    .form__input.form__checkbox 
+                        input(type="checkbox" id="10-1")
+                        label.form__checkbox-label(for="10-1") Запрос в ФМС (проверка паспорта) и ФНС (проверка документ + ФИО и ДР)
+            .form__input.form__checkbox 
+                input(type="checkbox" id="11")
+                label.form__checkbox-label(for="11") Запрос в ФССП (долги)
+            .form__input.form__checkbox 
+                input(type="checkbox" id="12")
+                label.form__checkbox-label(for="12") Запрос сведений о мошенничестве
+            .form__bottom
+                button.form__submit.btn.btn--green(type="submit") Сохранить изменения
+            
+            
